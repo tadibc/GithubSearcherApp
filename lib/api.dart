@@ -70,7 +70,6 @@ class Api {
       final responseBody = await httpResponse.transform(utf8.decoder).join();
       return json.decode(responseBody);
     } on Exception catch (e) {
-      print('$e');
       return null;
     }
   }
